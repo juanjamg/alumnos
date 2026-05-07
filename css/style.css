@@ -1,0 +1,202 @@
+/* ==========================================
+   ESTILOS GENERALES Y RESET
+   ========================================== */
+* { 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+body { 
+    margin: 0; 
+    background-color: #f4f6f9; 
+    color: #333; 
+}
+
+/* ==========================================
+   BARRA DE NAVEGACIÓN
+   ========================================== */
+.navbar { 
+    background: #2c3e50; /* Azul oscuro institucional */
+    color: white; 
+    padding: 1rem 2rem; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar h1 { 
+    margin: 0; 
+    font-size: 1.5rem; 
+}
+
+.navbar .links a { 
+    color: white; 
+    text-decoration: none; 
+    margin-left: 15px; 
+    font-weight: bold; 
+    transition: color 0.3s ease;
+}
+
+.navbar .links a:hover { 
+    color: #3498db; /* Azul claro al pasar el mouse */
+}
+
+/* ==========================================
+   CONTENEDORES PRINCIPALES
+   ========================================== */
+.container { 
+    max-width: 1000px; 
+    margin: 2rem auto; 
+    padding: 0 1rem; 
+}
+
+.split-layout { 
+    display: grid; 
+    grid-template-columns: 1fr 2fr; 
+    gap: 2rem; 
+}
+
+.panel { 
+    background: white; 
+    padding: 1.5rem; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+}
+
+/* ==========================================
+   FORMULARIOS
+   ========================================== */
+.form-group { 
+    margin-bottom: 1rem; 
+}
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+    color: #2c3e50;
+}
+
+input[type="text"], 
+select, 
+textarea { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 1rem;
+}
+
+input[type="text"]:focus, 
+select:focus, 
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.search-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+/* ==========================================
+   BOTONES
+   ========================================== */
+.btn { 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    color: white; 
+    font-weight: bold; 
+    transition: background 0.3s ease;
+}
+
+.btn-primary { 
+    background: #3498db; 
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+.btn-primary:hover { background: #2980b9; }
+
+.btn-secondary { background: #95a5a6; }
+.btn-secondary:hover { background: #7f8c8d; }
+
+.btn-danger { background: #e74c3c; }
+.btn-danger:hover { background: #c0392b; }
+
+.btn-sm { 
+    padding: 5px 10px; 
+    font-size: 0.8rem; 
+    margin-right: 5px;
+}
+
+/* ==========================================
+   TABLAS Y ETIQUETAS
+   ========================================== */
+.table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 1rem; 
+    background: white; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.table th, .table td { 
+    padding: 12px; 
+    border-bottom: 1px solid #ddd; 
+    text-align: left; 
+}
+
+.table th { 
+    background-color: #2c3e50; 
+    color: white; 
+}
+
+.table tr:hover {
+    background-color: #f1f4f6;
+}
+
+.badge { 
+    background: #f39c12; 
+    color: white; 
+    padding: 4px 8px; 
+    border-radius: 12px; 
+    font-size: 0.85em; 
+    font-weight: bold;
+}
+
+/* ==========================================
+   VALIDACIONES VISUALES Y MENSAJES
+   ========================================== */
+/* Borde rojo cuando el input falla la validación */
+.error-input { 
+    border: 2px solid #e74c3c !important; 
+    background-color: #fadbd8; 
+}
+
+/* Contenedor de mensaje de error general */
+.error-msg { 
+    background: #fdf2f0; 
+    color: #c0392b; 
+    padding: 12px; 
+    border-left: 5px solid #e74c3c; 
+    margin-bottom: 15px; 
+    font-weight: bold; 
+    border-radius: 0 4px 4px 0;
+}
+
+/* Contenedor de mensaje de éxito */
+.success-msg { 
+    background: #eafaf1; 
+    color: #27ae60; 
+    padding: 12px; 
+    border-left: 5px solid #2ecc71; 
+    margin-bottom: 15px; 
+    font-weight: bold; 
+    border-radius: 0 4px 4px 0;
+}

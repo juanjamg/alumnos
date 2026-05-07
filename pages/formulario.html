@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Alumnos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Sistema de Gestión Escolar</h1>
+        <div class="links">
+            <a href="../index.html">Inicio</a>
+            <a href="formulario.html">Registro de Alumnos</a>
+            <a href="crud.html">Directorio Estudiantil</a>
+        </div>
+    </nav>
+
+    <main class="container split-layout">
+        <!-- FORMULARIO B: BÚSQUEDA (Simula GET) -->
+        <section class="panel">
+            <h3>Buscar Alumno (GET)</h3>
+            <form action="crud.html" method="GET" class="search-form">
+                <input type="text" name="busqueda" placeholder="Buscar por nombre o apellido...">
+                <select name="categoria">
+                    <option value="">Todas las carreras</option>
+                    <option value="Ingeniería en Sistemas">Ingeniería en Sistemas</option>
+                    <option value="Administración">Administración de Empresas</option>
+                    <option value="Derecho">Derecho</option>
+                    <option value="Medicina">Medicina</option>
+                </select>
+                <button type="submit" class="btn btn-secondary">Buscar</button>
+            </form>
+        </section>
+
+        <!-- FORMULARIO A / C: ALTA Y EDICIÓN (Simula POST/PUT) -->
+        <section class="panel">
+            <h3 id="formTitle">Inscribir Nuevo Alumno</h3>
+            <div id="mensajes"></div>
+            
+            <form id="formA">
+                <input type="hidden" id="editId">
+                
+                <div class="form-group">
+                    <label>Nombre Completo *</label>
+                    <input type="text" id="nombre" placeholder="Ej: Juan Pérez Gómez">
+                </div>
+
+                <div class="form-group">
+                    <label>Carrera Asignada *</label>
+                    <select id="categoria">
+                        <option value="">Seleccione una carrera...</option>
+                        <option value="Ingeniería en Sistemas">Ingeniería en Sistemas</option>
+                        <option value="Ingeniería en Informatica">Ingeniería en Informatica</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Comentarios Académicos *</label>
+                    <textarea id="descripcion" rows="3" placeholder="Escribe 'Ninguno' si no aplica..."></textarea>
+                </div>
+
+                <button type="submit" id="btnSubmit" class="btn btn-primary">Guardar Expediente</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

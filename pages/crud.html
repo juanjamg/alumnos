@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Directorio - Gestión Escolar</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Sistema de Gestión Escolar</h1>
+        <div class="links">
+            <a href="../index.html">Inicio</a>
+            <a href="formulario.html">Registro de Alumnos</a>
+            <a href="crud.html">Directorio Estudiantil</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Directorio General de Alumnos</h2>
+        <div id="resultadosMsg"></div>
+
+        <table class="table" id="tablaCrud">
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Nombre del Alumno</th>
+                    <th>Carrera</th>
+                    <th>Comentarios</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyCrud">
+                <!-- Rellenado con JS -->
+            </tbody>
+        </table>
+    </main>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
